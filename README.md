@@ -146,6 +146,17 @@ print("🚀 FastAPI running at:", public_url)
 ---
 
 ## ✅ How to Use
+🚀 How to Run (in Google Colab)
+Open the Notebook in Google Colab.
+Install requirements:
+
+!pip install requests python-dotenv
+Upload your .env file containing your OpenWeatherMap API key:
+
+OPENWEATHER_API=your_api_key_here
+Run all cells to see step-by-step planning and agent execution.
+
+
 
 1. Go to [FastAPI Docs](https://b660-35-233-131-53.ngrok-free.app/docs)  
 2. Click on `POST /evaluate`  
