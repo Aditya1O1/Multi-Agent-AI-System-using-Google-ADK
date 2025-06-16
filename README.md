@@ -146,22 +146,48 @@ print("🚀 FastAPI running at:", public_url)
 ---
 
 ## ✅ How to Use
-🚀 How to Run (in Google Colab)
-Open the Notebook in Google Colab.
-Install requirements:
 
+### 🚀 How to Run (in Google Colab)
+
+1. **Open the Notebook in Google Colab.**
+2. **Install the required libraries:**
+
+```python
 !pip install requests python-dotenv
-Upload your .env file containing your OpenWeatherMap API key:
+```
 
+3. **Upload your `.env` file** containing your OpenWeatherMap API key:
+
+```env
 OPENWEATHER_API=your_api_key_here
-Run all cells to see step-by-step planning and agent execution.
+```
 
+4. **Run all cells** to see:
+   - Goal planning via the Planner Agent  
+   - Step-by-step agent execution  
+   - Final output combining results from SpaceX, Weather, Bitcoin, and News agents  
 
+---
 
-1. Go to [FastAPI Docs](https://b660-35-233-131-53.ngrok-free.app/docs)  
-2. Click on `POST /evaluate`  
-3. Click **Try it out** → Paste any of the above JSON goals → Click **Execute**  
-4. View the output in real-time  
+### 🌐 Try the API Live
+
+Visit the FastAPI Swagger UI:
+
+👉 [https://b660-35-233-131-53.ngrok-free.app/docs](https://b660-35-233-131-53.ngrok-free.app/docs)
+
+1. Select the `/evaluate` endpoint  
+2. Click **Try it out**  
+3. Paste a goal like:
+
+```json
+{
+  "goal": "Get the current Bitcoin price in INR"
+}
+```
+
+4. Click **Execute** to view results.
+
+---
 
 ---
 
