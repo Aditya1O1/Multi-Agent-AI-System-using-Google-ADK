@@ -1,6 +1,5 @@
 # Multi-Agent-AI-System-using-Google-ADK
 
-# Multi-Agent AI System using Google ADK 🚀
 
 This project implements a **Multi-Agent AI System** that takes a user-defined goal and routes it through multiple intelligent agents. Each agent enriches and processes the information received from the previous one until the objective is fulfilled.
 
