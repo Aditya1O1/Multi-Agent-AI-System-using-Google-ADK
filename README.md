@@ -1,7 +1,61 @@
 # Multi-Agent-AI-System-using-Google-ADK
 
 
-This project implements a **Multi-Agent AI System** that takes a user-defined goal and routes it through multiple intelligent agents. Each agent enriches and processes the information received from the previous one until the objective is fulfilled.
+This project implements a multi-agent AI system using Google ADK (Agent Development Kit). It takes a natural language goal from the user, generates a plan, and executes a sequence of intelligent agents that collaboratively work to fulfill the objective.
+
+Each agent builds on the previous one’s output, ensuring inter-agent dependency, planning, and iteration. The system can handle goals like:
+
+“Find the next SpaceX launch, check weather at that location, then summarize if it may be delayed.”
+
+🔍 Use Case Examples
+
+✅ Goal:
+Get the current price of Bitcoin and summarize recent sentiment
+✨ Output:
+Bitcoin price: $105,126
+News Headlines: 5 recent articles
+Market Sentiment: 😐 Neutral
+
+✅ Goal:
+Get the date and summary of the next SpaceX launch
+✨ Output:
+Mission: Galaxy 33 & 34
+Rocket: Falcon 9
+Launchpad: CCSFS SLC 40
+Location: Latitude 28.56, Longitude -80.57
+Launch Date: 2022-10-08 (🔁 outdated, see improvements below)
+
+🧠 System Architecture
+flowchart TD
+    A[User Goal Input] --> B[Planner Agent]
+    B --> C[Agent 1: Data Retrieval]
+    C --> D[Agent 2: Enrichment/Validation]
+    D --> E[Agent 3: Summarization/Decision]
+    E --> F[Final Output to User]
+
+Planner Agent: Parses the goal and sequences the task pipeline.
+Retrieval Agent: Calls APIs like SpaceX, CoinGecko, or NewsAPI.
+Weather Agent: Pulls weather data for the launch site using OpenWeatherMap.
+Evaluation Agent: Analyzes risk of delay and formats the summary.
+
+
+⚙️ How It Works
+
+The system takes a goal as input and automatically:
+
+Parses and interprets the goal
+Creates a multi-step plan involving dependent agents
+Agents interact with external APIs and process the data
+Returns a context-aware, final answer to the user
+
+Supported APIs:
+
+SpaceX API
+OpenWeatherMap API
+CoinGecko API
+NewsAPI
+
+
 
 ## 🌟 Features
 
